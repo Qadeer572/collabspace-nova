@@ -9,33 +9,38 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* Hero Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-hero" />
-        </div>
+      <section className="relative h-screen w-full overflow-hidden bg-gradient-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+          <div className="flex items-center justify-between h-full gap-8">
+            {/* Hero Content - Left Side */}
+            <div className="flex-1 z-10">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+                  Collaborate, Learn & Grow Together
+                </h1>
+                <p className="text-lg sm:text-xl text-white/80 mb-8 leading-relaxed">
+                  Join the future of collaborative workspaces where teams unite to innovate, 
+                  share knowledge, and achieve extraordinary results together.
+                </p>
+                <Button 
+                  size="lg" 
+                  variant="hero"
+                  className="text-lg px-8 py-4 h-auto font-semibold"
+                >
+                  Get Started
+                </Button>
+              </div>
+            </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-              Collaborate, Learn & Grow Together
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Join the future of collaborative workspaces where teams unite to innovate, 
-              share knowledge, and achieve extraordinary results together.
-            </p>
-            <Button 
-              size="lg" 
-              variant="hero"
-              className="text-lg px-8 py-4 h-auto font-semibold"
-            >
-              Get Started
-            </Button>
+            {/* Hero Image - Right Side */}
+            <div className="flex-1 relative h-full flex items-center justify-center">
+              <div 
+                className="w-full max-w-lg h-3/4 bg-cover bg-center rounded-2xl shadow-elegant transform rotate-3 hover:rotate-1 transition-smooth"
+                style={{ backgroundImage: `url(${heroImage})` }}
+              >
+                <div className="absolute inset-0 bg-gradient-hero rounded-2xl" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
