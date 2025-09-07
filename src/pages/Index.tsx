@@ -38,7 +38,6 @@ const Index = () => {
                 className="w-full max-w-lg h-3/4 bg-cover bg-center rounded-2xl shadow-elegant transform rotate-3 hover:rotate-1 transition-smooth"
                 style={{ backgroundImage: `url(${heroImage})` }}
               >
-                <div className="absolute inset-0 bg-gradient-hero rounded-2xl" />
               </div>
             </div>
           </div>
